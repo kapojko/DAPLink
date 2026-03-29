@@ -96,5 +96,5 @@ custom_targets.json
 log.txt
 mbed-os/
 
-#vscode editor
-.vscode
+example_no_commit/
+nul

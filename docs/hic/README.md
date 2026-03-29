@@ -23,3 +23,4 @@ Support for these HICs has been recently added.
 | [stm32f072x8](stm32f072xx.md) |  M0  |  48 Mhz |  16 KB |  64 KB |  FS |
 | [stm32f072xb](stm32f072xx.md) |  M0  |  48 Mhz |  16 KB | 128 KB |  FS |
 | [stm32h743xx](stm32h743xx.md) |  M7  | 480 Mhz |   1 MB |   2 MB |  HS |
+| [hk32f103xb](hk32f103xb.md)   |  M3  |  72 Mhz |  20 KB | 128 KB |  FS |
