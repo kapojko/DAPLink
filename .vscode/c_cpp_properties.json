@@ -1,0 +1,58 @@
+{
+    "configurations": [
+        {
+            "name": "DAPLink hk32f103xb_if",
+            "compilerPath": "C:/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++98",
+            "intelliSenseMode": "gcc-arm",
+            "compileCommands": "${workspaceFolder}/projectfiles/cmake_gcc_arm/hk32f103xb_if/build",
+            "macros": [
+                "CDC_ENDPOINT",
+                "DAPLINK_BUILD_KEY=0x9B939E8F",
+                "DAPLINK_HIC_ID=0x97969950",
+                "DAPLINK_IF",
+                "DAPLINK_NO_ASSERT_FILENAMES",
+                "DAPLINK_VERSION=259",
+                "DRAG_N_DROP_SUPPORT",
+                "HID_ENDPOINT",
+                "HK32F103CBT6_NO_FLASH",
+                "HK32F103xB",
+                "HK32_ENABLE_DEBUG",
+                "INTERFACE_HK32F103XB",
+                "MSC_ENDPOINT",
+                "OS_CLOCK=48000000",
+                "OS_TICK_FREQ=100",
+                "SECTOR_BUFFER_SIZE=256",
+                "USE_HAL_DRIVER",
+                "HK32F103CBT6",
+                "WEBUSB_INTERFACE",
+                "WINUSB_INTERFACE",
+                "__PROGRAM_START",
+                "__packed=__packed"
+            ],
+            "includePath": [
+                "${workspaceFolder}/source/usb",
+                "${workspaceFolder}/source/daplink/cmsis-dap",
+                "${workspaceFolder}/source/daplink/drag-n-drop",
+                "${workspaceFolder}/source/daplink/usb2uart",
+                "${workspaceFolder}/source/daplink/settings",
+                "${workspaceFolder}/source/daplink",
+                "${workspaceFolder}/source/daplink/interface",
+                "${workspaceFolder}/source/cmsis-core",
+                "${workspaceFolder}/source/hic_hal",
+                "${workspaceFolder}/source/hic_hal/cmsis-driver",
+                "${workspaceFolder}/source/target",
+                "${workspaceFolder}/source/hic_hal/hk32/hk32f103xb",
+                "${workspaceFolder}/source/hic_hal/hk32/hk32f103xb/cmsis",
+                "${workspaceFolder}/source/hic_hal/hk32/hk32f103xb/StdPeriphDriver/inc",
+                "${workspaceFolder}/source/rtos2/Include",
+                "${workspaceFolder}/source/rtos2/RTX/Include"
+            ],
+            "defines": [
+                "ARM_MATH_CM3"
+            ]
+        }
+    ],
+    "version": 4
+}

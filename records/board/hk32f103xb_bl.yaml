@@ -1,0 +1,4 @@
+common:
+    sources:
+        board:
+            - source/board/hk32f103xb_bl.c
