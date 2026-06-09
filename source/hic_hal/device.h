@@ -46,6 +46,8 @@
 #include "nrf52820.h"
 #elif defined (INTERFACE_HK32F103XB)
 #include "hk32f10x.h"
+#elif defined (INTERFACE_HK32F103XBA)
+#include "hk32f103xxxxa.h"
 #else
 #error "CMSIS core headers needed"
 #endif

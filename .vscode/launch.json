@@ -36,6 +36,40 @@
             "runToEntry": true
         },
         {
+            "name": "Debug HK32F103XBA (Bootloader)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "projectfiles/cmake_gcc_arm/hk32f103xba_bl/build/hk32f103xba_bl.elf",
+            "serverpath": "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/bin/openocd.exe",
+            "configFiles": [
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/interface/cmsis-dap.cfg",
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/target/stm32f1x.cfg"
+            ],
+            "searchDir": [],
+            "svdFile": "",
+            "preLaunchTask": "",
+            "runToEntry": true
+        },
+        {
+            "name": "Debug HK32F103XBA (Interface)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "projectfiles/cmake_gcc_arm/hk32f103xba_if/build/hk32f103xba_if.elf",
+            "serverpath": "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/bin/openocd.exe",
+            "configFiles": [
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/interface/cmsis-dap.cfg",
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/target/stm32f1x.cfg"
+            ],
+            "searchDir": [],
+            "svdFile": "",
+            "preLaunchTask": "",
+            "runToEntry": true
+        },
+        {
             "name": "Debug STM32F103 (Bootloader)",
             "type": "cortex-debug",
             "request": "launch",

@@ -1,0 +1,28 @@
+common:
+    target:
+        - Cortex-M3
+    core:
+        - Cortex-M3
+    macros:
+        - INTERFACE_HK32F103XBA
+        - DAPLINK_HIC_ID=0x97969951
+        - __packed=__packed
+        - DAPLINK_NO_ASSERT_FILENAMES
+        - OS_CLOCK=72000000
+    includes:
+        - source/hic_hal/hk32/hk32f103xba
+        - source/hic_hal/hk32/hk32f103xba/CMSIS/HK32F103xxxxA/Include
+        - source/hic_hal/hk32/hk32f103xba/CMSIS/CM3/Core
+        - source/hic_hal/hk32/hk32f103xba/HK32F103xxxxA_StdPeriphDriver/inc
+        - source/hic_hal/hk32/hk32f103xba/hal
+    sources:
+        hic_hal:
+            - source/hic_hal/hk32/hk32f103xba
+            - source/hic_hal/hk32/hk32f103xba/CMSIS/HK32F103xxxxA/Source
+            - source/hic_hal/hk32/hk32f103xba/HK32F103xxxxA_StdPeriphDriver/src
+
+tool_specific:
+    gcc_arm:
+        sources:
+            hic_hal:
+                - source/hic_hal/hk32/hk32f103xba/gcc
