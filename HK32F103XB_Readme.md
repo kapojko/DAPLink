@@ -79,6 +79,19 @@ python -m venv venv
 - **Flash**: 128 KB (0x08000000 + 48KB bootloader)
 - **RAM**: 20 KB (0x20000000)
 
+### Flash Layout
+
+The HK32F103 flash page size is **2 KB** (unlike STM32F103 medium-density which is 1 KB). The layout uses 2 KB sector alignment throughout:
+
+| Region  | Start      | Size     | Description                  |
+|---------|------------|----------|------------------------------|
+| BL      | 0x08000000 | 48 KB    | Bootloader (24 × 2 KB pages) |
+| IF      | 0x0800C000 | 78 KB    | Interface firmware (39 × 2 KB pages) |
+| Config  | 0x0801F800 | 2 KB     | User config (1 × 2 KB page)  |
+| **Total** |          | **128 KB** |                          |
+
+`DAPLINK_SECTOR_SIZE` and `DAPLINK_MIN_WRITE_SIZE` are both `0x800` (2 KB) in `source/hic_hal/hk32/hk32f103xb/daplink_addr.h`.
+
 ## Hardware Notes
 
 ### nRESET Pin (PB0)
