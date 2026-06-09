@@ -31,7 +31,7 @@
 * at address start + size.
 */
 static const sector_info_t sectors_info[] = {
-    {0x08000000 + KB(48), 0x400},
+    {0x08000000 + KB(48), 0x800},
     };
 
 // hk32f103xb target information
