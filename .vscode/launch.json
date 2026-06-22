@@ -102,6 +102,40 @@
             "svdFile": "",
             "preLaunchTask": "",
             "runToEntry": true
+        },
+        {
+            "name": "Debug STM32H723VG (Bootloader)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "projectfiles/cmake_gcc_arm/stm32h723vg_bl/build/stm32h723vg_bl.elf",
+            "serverpath": "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/bin/openocd.exe",
+            "configFiles": [
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/interface/cmsis-dap.cfg",
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/target/stm32h7x.cfg"
+            ],
+            "searchDir": [],
+            "svdFile": "",
+            "preLaunchTask": "",
+            "runToEntry": true
+        },
+        {
+            "name": "Debug STM32H723VG (Interface)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "projectfiles/cmake_gcc_arm/stm32h723vg_if/build/stm32h723vg_if.elf",
+            "serverpath": "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/bin/openocd.exe",
+            "configFiles": [
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/interface/cmsis-dap.cfg",
+                "D:/Programs/openocd-v0.12.0-i686-w64-mingw32/share/openocd/scripts/target/stm32h7x.cfg"
+            ],
+            "searchDir": [],
+            "svdFile": "",
+            "preLaunchTask": "",
+            "runToEntry": true
         }
     ]
 }

@@ -1,0 +1,38 @@
+common:
+    target:
+        - Cortex-M7
+    core:
+        - Cortex-M7
+    macros:
+        - INTERFACE_STM32H723VG
+        - USE_HAL_DRIVER
+        - STM32H723xx
+        - DAPLINK_HIC_ID=0x97969952  # DAPLINK_HIC_ID_STM32H723VG
+        - __packed=__packed
+        - DAPLINK_NO_ASSERT_FILENAMES
+        - OS_CLOCK=300000000
+        - OS_ROBIN_ENABLE=1
+        - DEBUG_PRINT        # Enable PRINT() / DebugPrint() over USART2
+        # DTCM is 128 KB but the flash sector is also 128 KB, so the
+        # iap_flash_intf staging buffer (DAPLINK_SECTOR_SIZE) won't fit
+        # in DTCM. Place it in AXI SRAM via .sector_buf_section.
+        - DAPLINK_STM32H723VG_SECTOR_BUF_IN_AXISRAM
+    includes:
+        - source/hic_hal/stm32/stm32h723vg
+        - source/hic_hal/stm32/stm32h723vg/cmsis
+        - source/hic_hal/stm32/stm32h723vg/Drivers/STM32H7xx_HAL_Driver/Inc
+        - source/hic_hal/stm32/stm32h723vg/Drivers/CMSIS/Include
+        - source/hic_hal/stm32/stm32h723vg/Drivers/CMSIS/Device/ST/STM32H7xx/Include
+    sources:
+        hic_hal:
+            - source/hic_hal/stm32/stm32h723vg
+            - source/hic_hal/stm32/stm32h723vg/cmsis
+            - source/hic_hal/stm32/stm32h723vg/Drivers/STM32H7xx_HAL_Driver/Src
+
+tool_specific:
+    gcc_arm:
+        sources:
+            hic_hal:
+                - source/hic_hal/stm32/stm32h723vg/gcc
+        linker_file:
+            - source/hic_hal/stm32/stm32h723vg/stm32h723vg.ld

@@ -87,6 +87,15 @@ static bool current_page_set;
 static uint32_t current_page;
 static uint32_t current_page_write_size;
 static uint32_t crc;
+/* The iap staging buffer (sized DAPLINK_SECTOR_SIZE) won't fit in DTCM
+ * on HICs where DTCM < DAPLINK_SECTOR_SIZE. Such HICs opt in to placing
+ * it in AXI SRAM (or other larger RAM region) via the HIC-specific
+ * DAPLINK_*_SECTOR_BUF_IN_AXISRAM macro defined in their build record,
+ * and provide a matching ".sector_buf_section" in their linker script.
+ * Ports that don't define the macro keep the default .bss placement. */
+#ifdef DAPLINK_STM32H723VG_SECTOR_BUF_IN_AXISRAM
+__attribute__((section("sector_buf_section")))
+#endif
 static uint8_t sector_buf[DAPLINK_SECTOR_SIZE];
 
 static error_t init()

@@ -1,5 +1,11 @@
 # HK32F103XB Port - Build Guide
 
+## Windows: Fix `.py` File Association Before First Build
+
+The build invokes Python scripts through shell association (`cmd.exe /C ... .py`). On a clean Windows install, this is often pinned to an editor (e.g. Geany) via `HKCU\...\FileExts\.py\UserChoice`, which makes ninja show the "Open with" dialog instead of running the script.
+
+**One-time fix:** open **Settings → Apps → Default apps → Choose defaults by file type → `.py`** and set it to **Python** (`python.exe`). Then rebuild.
+
 ## SDK Usage
 
 The HK32F103XB port uses the **HK32F103 SDK** (taken from Github: https://github.com/JimpleM/594642987-HK32F103CBT6A-Mini-Bored-System/tree/main/HK32F103 ).
